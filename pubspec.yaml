@@ -1,0 +1,84 @@
+name: poc_flavor
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.5 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  firebase_core: ^1.19.1
+  firebase_messaging: ^11.4.4
+  flutter_local_notifications: ^9.6.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  flutter_flavorizr: ^2.1.3
+
+# https://pub.dev/packages/flutter_flavorizr:
+
+##gerar appbundle
+#flutter build appbundle --release --flavor ygor -t lib/main_ygor.dart
+
+##buildar novo flavor
+#flutter pub run flutter_flavorizr -p assets:download,assets:extract,android:androidManifest,android:buildGradle,android:dummyAssets,android:icons,flutter:flavors,flutter:targets,ios:xcconfig,ios:buildTargets,ios:schema,ios:dummyAssets,ios:icons,ios:plist,ios:launchScreen,google:firebase,assets:clean,ide:config
+
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "flavor-type"
+    ios:
+
+  flavors:
+    ygor:
+      app:
+        name: "App do Ygor"
+      android:
+        applicationId: "com.example.ygor"
+        icon: "whitelabel/ygor/icon.png"
+        customConfig:
+          minSdkVersion: 23
+        firebase:
+          config: "whitelabel/ygor/google-services.json"
+      ios:
+        bundleId: "com.example.ygor"
+        icon: "whitelabel/ygor/icon.png"
+#        firebase:
+#          config: ".firebase/ygor/GoogleService-Info.plist"
+    thiago:
+      app:
+        name: "App do Thiago"
+      android:
+        applicationId: "com.example.thiago"
+        icon: "whitelabel/thiago/icon.png"
+        customConfig:
+          minSdkVersion: 23
+        firebase:
+          config: "whitelabel/thiago/google-services.json"
+      ios:
+        bundleId: "com.example.thiago"
+        icon: "whitelabel/thiago/icon.png"
+#        firebase:
+#          config: ".firebase/thiago/GoogleService-Info.plist"
+#    jessica:
+#      app:
+#        name: "App da jessica"
+#      android:
+#        applicationId: "com.example.jessica"
+      #        firebase:
+      #          config: ".firebase/thiago/google-services.json"
+#      ios:
+#        bundleId: "com.example.jessica"
+#        icon: "whitelabel/thiago/icon.png"
+#        firebase:
+#          config: ".firebase/thiago/GoogleService-Info.plist"
+
+flutter:
+  uses-material-design: true

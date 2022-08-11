@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "406624469163",
+    "project_id": "poc-flavor",
+    "storage_bucket": "poc-flavor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406624469163:android:3772bf8dacca36711df7ee",
+        "android_client_info": {
+          "package_name": "com.example.ygor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406624469163-5cf88mbuc1uj7nq6rh5khovn8o3bm0n1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOyLQw4XPOgGHXqsMjTgvBH3MJzCv4vXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406624469163-5cf88mbuc1uj7nq6rh5khovn8o3bm0n1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
